@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film-/meselista</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        *{box-sizing:border-box;border-collapse:collapse}html,body{height:100%;font-family:Arial,Helvetica,sans-serif;background-color:#ffebcd;font-weight:700;padding:0;margin:0}#container{display:flex;height:100%;flex-direction:column}main{display:flex;justify-content:center;align-items:center;padding:5px}.film_list{flex:80%;border-radius:7px;box-shadow:0 0 20px #fff}table{width:100%}th,td{border:1px solid #ffebcd;border-radius:7px;padding:3px}th{padding:7px;background-color:#8b4513;color:#f5deb3;font-size:105%}tr:nth-child(even){background-color:#a0522d;color:#ffebcd}tr:nth-child(odd){background-color:#d2b48c}td:nth-child(2),td:nth-child(3),td:nth-child(4){text-align:center}tr:hover{background-color:#bdb76b}.megnezve{background-color:green}a{color:purple}.table-sortable th{cursor:pointer}.table-sortable .th-sort-asc::after{content:"\25b4"}.table-sortable .th-sort-desc::after{content:"\25be"}.table-sortable .th-sort-asc::after,.table-sortable .th-sort-desc::after{margin-left:5px}.table-sortable .th-sort-asc,.table-sortable .th-sort-desc{background:rgba(0,0,0,0.1)}.hidden{display: none;}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <main>
+            <div class="film_list table-sortable">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Cím</th>
+                        <th>Dátum</th>
+                        <th>Perc</th>
+                        <th>Link</th>
+                        <th>Megnézve</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr> -->
+
+                    <tr>
+                        <td>Verseny a javából</td>
+                        <td>1965</td>
+                        <td>160</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/verseny-a-javabol-1965-magyar-the-great-race-7I2ki3CRWKfeuuhk">Verseny a javából</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Azok a csodálatos férfiak</td>
+                        <td>1969</td>
+                        <td>125</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/azok-a-csodalatos-ferfiak-1969.-G9Zk5CmEyNBGGlVJ">Azok a csodálatos férfiak</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Macska az űrből</td>
+                        <td>1978</td>
+                        <td>104</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/macska-az-urbol-1978.-X23Vzv5hvxzbpiSy">Macska az űrből</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Macskarisztokraták</td>
+                        <td>1970</td>
+                        <td>078</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/macskarisztokratak-1970.mp4-12-even-aluliak-szamara-a-megt-hAcXFxosv3ws90nP">Macskarisztokraták</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pí élete</td>
+                        <td>2012</td>
+                        <td>127</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/pi-elete-2012.mp4-12-even-aluliak-szamara-a-megt-rw0nDSBUMsvSmf3R">Pí élete</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Viharos vakáció</td>
+                        <td>2000</td>
+                        <td>094</td>
+                        <td><a href="https://www.youtube.com/watch?v=4XFpcJuQtqc">Viharos vakáció</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A kicsi kocsi kalandjai</td>
+                        <td>1968</td>
+                        <td>108</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-kicsi-kocsi-kalandjai.avi-0FsC8JUNIiPsXK27">A kicsi kocsi kalandjai</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Majmok bolygója 5.</td>
+                        <td>1973</td>
+                        <td>093</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/majmok.bolygoja.v.1973.hun.a-csata-HxVovgGDo4RoqS6r">Majmok bolygója 5.</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Majmok bolygója 4.</td>
+                        <td>1972</td>
+                        <td>088</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/majmok.bolygoja.iv.1972-a-hoditas-BPNDlttK3s6mDHdq">Majmok bolygója 4.</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Majmok bolygója 3.</td>
+                        <td>1971</td>
+                        <td>098</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/majmok.bolygoja.iii.1971-menekules-vWy4H9To91skcm8i">Majmok bolygója 3.</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Boszorkányok</td>
+                        <td>1990</td>
+                        <td>091</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/boszorkanyok-teljes-film-videa.mp4-SSGhX9nghX9OlIQP">Boszorkányok (1990)</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Boszorkányok (újabb)</td>
+                        <td>2020</td>
+                        <td>106</td>
+                        <td></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hókusz pókusz</td>
+                        <td>1993</td>
+                        <td>096</td>
+                        <td></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hókusz pókusz 2</td>
+                        <td>2022</td>
+                        <td></td>
+                        <td></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Chipkatonák</td>
+                        <td>1998</td>
+                        <td>108</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/chipkatonak-csaladi-akciovigjatek-1998-.mp4-K9gMp1mK2QDBHiUJ">Chipkatonák</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Bigyó felügyelő</td>
+                        <td>1999</td>
+                        <td>078</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/bigyo-felugyelo.-1999.-78-perc.-amerikai-akcio-vigjatek-73eRfhLIQtsTRjoH">Bigyó felügyelő</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A szórakozott professzor</td>
+                        <td>1961</td>
+                        <td>096</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-szorakozott-professzor-1961.-3FPdtJaw4uZusw4G">A szórakozott professzor</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Az ember tragédiája</td>
+                        <td>1969</td>
+                        <td>146</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/az-ember-tragediaja-1969.-O0ex4HdGpuRdknbI">Az
+                                ember tragédiája (1969)</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A fegyvertelen katona</td>
+                        <td>2016</td>
+                        <td>139</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-fegyvertelen-katona-0uK6PegrA8wsdLUy"
+                                target="_blank">A fegyvertelen katona</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Robotzsaru</td>
+                        <td>1987</td>
+                        <td>102</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Elfújta a szél</td>
+                        <td>1939</td>
+                        <td>238</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/elfujta-a-szel-ky3SZYYrErOvJZWZ">Elfújta a
+                                szél</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Modern idők</td>
+                        <td>1936</td>
+                        <td>087</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/charlie-chaplin-modern-times-1936-nemafilm-szatira-vigjatek-KciWz5jOhUQttrJD">Modern
+                                idők</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Robin Hood</td>
+                        <td>1938</td>
+                        <td>102</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/robin.hood.kalandjai.1938.bdrip.x264.custom.h-robin.hood.kalandjai.1938.bdri-jq1l4oUs59jPUtMD">Robin
+                                Hood (1938)</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ének az esőben</td>
+                        <td>1952</td>
+                        <td>103</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/enek-az-esoben-hd-1952-musical-v1JsWNazn8Eusy4C">Ének az esőben</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tízparancsolat</td>
+                        <td>1956</td>
+                        <td>220</td>
+                        <td>nincs fent teljesen :(</td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Willy Wonka és a csokoládégyár</td>
+                        <td>1971</td>
+                        <td>100</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/willy-wonka-es-a-csokigyar-willywonka-jDVbnDeQ27HlOg57">Willy
+                                Wonka és a csokoládégyár</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hair</td>
+                        <td>1979</td>
+                        <td>121</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/hair-1979-hu-fhd-1fiDfktIx0vgRirs">Hair</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A majmok bolygója</td>
+                        <td>1968</td>
+                        <td>112</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-majmok-bolygoja-1968.-eKtApearjAXVH8E5">A
+                                majmok bolygója (1968)</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Gyalog galopp</td>
+                        <td>1975</td>
+                        <td>091</td>
+                        <td><a href="https://www.youtube.com/watch?v=iIlnNibrjDc">Gyalog galopp</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Az Addams család - A galád család</td>
+                        <td>1991</td>
+                        <td>099</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/addams-family-.mp4-12-even-aluliak-szamara-a-megt-N5mrtiz3kv2nkOOw">Az
+                                Addams család 1.</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Az Addams család 2. - Egy kicsivel galádabb család</td>
+                        <td>1993</td>
+                        <td>094</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/addams-family-2..avi-vigjatek-fGP9TnSaDnpivZzg">Az
+                                Addams család 2.</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Feltámad a vadnyugat</td>
+                        <td>1973</td>
+                        <td>088</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/feltamad-a-vadnyugat-westworld-1973-jamesbrolin-lindagayescott-normanbartold-MuLWgrWCVTY9CTAH">Feltámad
+                                a vadnyugat</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Beetlejuice - Kísértethistória</td>
+                        <td>1988</td>
+                        <td>092</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/beetlejuice-kisertethistoria-1988.-SMFnTyNKCw8Hk9Rz">Beetlejuice
+                                (1988)</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Szárnyas fejvadász</td>
+                        <td>1982</td>
+                        <td>117</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/szarnyas-fejvadasz-1982.mp4-114-perc-16-even-aluliak-szamara-nem-aj-X84fYLAwVZTjuK6f">Szárnyas
+                                fejvadász</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Waterworld - Vízivilág</td>
+                        <td>1995</td>
+                        <td>135</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/waterworld-vizivilag.1995.-amerikai-fantasztikus-kalandfilm-axni3Kv5xjGYuEEI">Waterworld</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A jövő hírnöke</td>
+                        <td>1997</td>
+                        <td>177</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/a-jovo-hirnoke-1997.-costner-postman-nbxbUDFegEiceYIt">A
+                                jövő hírnöke</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A dolog</td>
+                        <td>1982</td>
+                        <td>109</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-dolog-valami-1982.-IG0uOZfjyy61H0Ff">A
+                                dolog (1982)</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Willow</td>
+                        <td>1988</td>
+                        <td>126</td>
+                        <td>vhsrip nagyon gyenge minőség :(</td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Drágám, a kölykök összementek</td>
+                        <td>1989</td>
+                        <td>093</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/dragam-a-kolykok-osszementek-teljes-rick-moranis-aqF5zZuWSEvxhxMK">Drágám,
+                                a kölykök összementek</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A 23-as szám</td>
+                        <td>2007</td>
+                        <td>098</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-23-as-szam-2007.-A4BZmJVg1sypVbjI">A 23-as
+                                szám</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Forrest Gump</td>
+                        <td>1994</td>
+                        <td>142</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/forrest-gump-1994.mp4-12-even-aluliak-szamara-a-megt-6rDoH8zr42lGnMOj">Forrest
+                                Gump</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ryan közlegény megmentése</td>
+                        <td>1998</td>
+                        <td>169</td>
+                        <td>-</td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Truman Show</td>
+                        <td>1998</td>
+                        <td>103</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/truman-show-the-1998-1o43p-carrey-film-hun-GR5cJSFJPLo64nCM">Truman
+                                Show</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hook</td>
+                        <td>1991</td>
+                        <td>142</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/hook-1991.mp4-12-even-aluliak-szamara-a-megt-kTgeQs4xcppcXYa0">Hook
+                                (1991)</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Az élet szép</td>
+                        <td>1997</td>
+                        <td>116</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/az-elet-szep-1997.-azeletszep-g7eLhLwzvKMVDYh1">Az
+                                élet szép</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Apollo-13</td>
+                        <td>1995</td>
+                        <td>140</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/apollo-13-1995.-pfca0o2HsZuKNwuZ">Apollo-13</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A titkok kertje</td>
+                        <td>1993</td>
+                        <td>101</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/a-titkos-kert-the-secret-99-perc-kertthe-garde-dTJhWeokwPuaZ9RG">A
+                                titkok kertje</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Csillagkapu</td>
+                        <td>1994</td>
+                        <td>116</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/csillagkapu-1.-1994-teljes-film.avi-film-stargat-qo1UAn7cYOLUhN4C">Csillagkapu</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>28 nappal később</td>
+                        <td>2002</td>
+                        <td>113</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/28-nappal-kesobb-2002.mp4-113-perc-18-even-aluliak-szamara-nem-aj-mKQb6ZMDCWYB4WXJ">28
+                                nappal később</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Robin Hood, a fuszeklik fejedelme</td>
+                        <td>1993</td>
+                        <td>104</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/robin-hood-a-fuszeklik-fejedelme-nAKexY6svN0CtbeL">Robin
+                                Hood, a fuszeklik fejedelme</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Meghívás egy gyilkos vacsorára</td>
+                        <td>1976</td>
+                        <td>095</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/meghivas-egy-gyilkos-vacsorara-7vnLGTu85QAUNKav">Meghívás
+                                egy gyilkos vacsorára</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>12 majom</td>
+                        <td>1995</td>
+                        <td>129</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/12-majom-1995-O8ESxhLcbqm6vJBL">12 majom</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Farkasokkal táncoló</td>
+                        <td>1990</td>
+                        <td>236</td>
+                        <td><a href="https://videa.hu/videok/nagyvilag/farkasokkal-tancolo-zWRJiHg0Rtsj2WWV">Farkasokkal
+                                táncoló</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Avatar</td>
+                        <td>2009</td>
+                        <td>162</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/avatar-hd-2009.-akcio-fantasy-kaland-Zg5YKanMAbAtRvyu">Avatar</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Világok harca</td>
+                        <td>2005</td>
+                        <td>116</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/vilagok-harca-2005-sci-fi-VyZc5JeNYTwWK67Q">Világok
+                                harca</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Charlie és a csokigyár</td>
+                        <td>2005</td>
+                        <td>115</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/charlie-es-a-csokigyar-NfhXmqCkgDsRTBz7">Charlie
+                                és a csokigyár</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Legendás állatok - Grindelwald bűntettei</td>
+                        <td>2018</td>
+                        <td>134</td>
+                        <td>-</td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Csillagok között</td>
+                        <td>2014</td>
+                        <td>169</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/csillagok-kozott-2014.mp4-12-even-aluliak-szamara-a-megt-QZBmK2KPZxlnBTMN">Csillagok
+                                között</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Szárnyas fejvadász 2049</td>
+                        <td>2017</td>
+                        <td>164</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/szarnyas-fejvadasz-2049-2017.mp4-16-even-aluliak-szamara-nem-aj-k9pdgVcy4wGk07H8">Szárnyas
+                                fejvadász 2049</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Lopott idő</td>
+                        <td>2011</td>
+                        <td>109</td>
+                        <td><a href="https://www.youtube.com/watch?v=yi-JAlcwatA">Lopott idő</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Eredet</td>
+                        <td>2010</td>
+                        <td>148</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/eredet-2010.mp4-142-perc-16-even-aluliak-szamara-nem-aj-dY6mxeJmk9FYaT1z">Eredet</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ex Machina</td>
+                        <td>2014</td>
+                        <td>108</td>
+                        <td><a href=""></a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A barbárokra várva</td>
+                        <td>2019</td>
+                        <td>112</td>
+                        <td>-</td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hidalgo - A tűz óceánja</td>
+                        <td>2004</td>
+                        <td>136</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/hidalgo-a-tuz-oceanja-filmespolc-jo-YRpGOgMFnQ2wl4vh">Hidalgo</a>
+                        </td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Feledés</td>
+                        <td>2013</td>
+                        <td>124</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/feledes-oblivion-hd720p-akciofilm-amerikai-sci-fi-8d6SUtjTPHXftn7W">Feledés</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>A Föld után</td>
+                        <td>2013</td>
+                        <td>100</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/a-fold-utan-720p-01FET3uW7GX7ELyo">A Föld
+                                után</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sárkányok háborúja</td>
+                        <td>2000</td>
+                        <td>107</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/sarkanyok-haboruja.avi-kaland-5pghA7ZUHCSiMSla">Sárkányok
+                                háborúja</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Az út</td>
+                        <td>2009</td>
+                        <td>111</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/az-ut-the-road-2009-8vOjfBx2cb1sFYkP">Az
+                                út</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Arábiai Lawrence</td>
+                        <td>1962</td>
+                        <td>218</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/arabiai-lawrence-1962.-arabiailawrence-lEjxE0uPBQ4jQeQa">Arábiai
+                                Lawrence</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Az ausztrál könnyűlovasság</td>
+                        <td>1987</td>
+                        <td>111</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/az-ausztral-konnyulovassag-1987.-K5v1iSBZH5g7kKwg">Az
+                                ausztrál könnyűlovasság</a></td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Gallipoli</td>
+                        <td>1981</td>
+                        <td>110</td>
+                        <td><a
+                                href="https://videa.hu/videok/film-animacio/gallipoli-1981.-KrtPz8y18AdI61dg">Gallipoli</a>
+                        </td>
+                        <td class=""><span class="hidden">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Star Wars: Ewoks - A bátrak karavánja</td>
+                        <td>1984</td>
+                        <td>096</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Star Wars: Ewoks - Harc az Endor bolygón</td>
+                        <td>1985</td>
+                        <td>094</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>2010: A kapcsolat éve</td>
+                        <td>1984</td>
+                        <td>116</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dűne</td>
+                        <td>1984</td>
+                        <td>137</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tron, avagy a számítógép lázadása</td>
+                        <td>1982</td>
+                        <td>096</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tron: Örökség</td>
+                        <td>2010</td>
+                        <td>125</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Lucy</td>
+                        <td>2014</td>
+                        <td>099</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A végtelen történet</td>
+                        <td>1984</td>
+                        <td>102</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A végtelen történet II. - Egy újabb fejezet</td>
+                        <td>1990</td>
+                        <td>090</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Momo</td>
+                        <td>1986</td>
+                        <td>101</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Alfa</td>
+                        <td>2018</td>
+                        <td>096</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sárkányszív</td>
+                        <td>1996</td>
+                        <td>103</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>IE 10000</td>
+                        <td>2008</td>
+                        <td>109</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tini nindzsa teknőcök</td>
+                        <td>1990</td>
+                        <td>093</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tao harcosai</td>
+                        <td>1997</td>
+                        <td>131</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tini nindzsa teknőcök 2</td>
+                        <td>1991</td>
+                        <td>098</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tini nindzsa teknőcök 3</td>
+                        <td>1993</td>
+                        <td>096</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Howard a kacsa</td>
+                        <td>1986</td>
+                        <td>110</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Szellemírtók</td>
+                        <td>1984</td>
+                        <td>105</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Szellemírtók 2</td>
+                        <td>1989</td>
+                        <td>108</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Rémségek kicsiny boltja</td>
+                        <td>1986</td>
+                        <td>094</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ollókezű Edward</td>
+                        <td>1990</td>
+                        <td>105</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Langolierek</td>
+                        <td>1995</td>
+                        <td>180</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Vissza a jövőbe</td>
+                        <td>1985</td>
+                        <td>116</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Vissza a jövőbe 2</td>
+                        <td>1989</td>
+                        <td>108</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Vissza a jövőbe 3</td>
+                        <td>1990</td>
+                        <td>118</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sonic</td>
+                        <td>2020</td>
+                        <td>099</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sonic 2</td>
+                        <td>2022</td>
+                        <td>122</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr Quinn</td>
+                        <td>1999</td>
+                        <td>086</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr Quinn - Hallgass a szívedre</td>
+                        <td>2001</td>
+                        <td>080</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>SpaceJam</td>
+                        <td>1996</td>
+                        <td>098</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>SpaceJam 2</td>
+                        <td>2021</td>
+                        <td>115</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Rövidzárlat</td>
+                        <td>1986</td>
+                        <td>098</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Rövidzárlat 2</td>
+                        <td>1988</td>
+                        <td>110</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Csoda a 8. utcában - Elem nélkül nem megy</td>
+                        <td>1987</td>
+                        <td>106</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>1492 - A paradicsom meghódítása</td>
+                        <td>1992</td>
+                        <td>154</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Nils Holgersson (film)</td>
+                        <td>2011</td>
+                        <td>180</td>
+                        <td></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A hercegnő és a kobold</td>
+                        <td>1991</td>
+                        <td>082</td>
+                        <td><a href="https://www.youtube.com/watch?v=ez192UDPNms">A hercegnő és a kobold</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                    <tr>
+                        <td>A majmok bolygója 2</td>
+                        <td>1970</td>
+                        <td>090</td>
+                        <td><a href="https://videa.hu/videok/film-animacio/majmok.bolygoja.ii.1970.hun-akcio-sci-fi-CGWPd8J9gI9wNmXK">A majdmok bolygója 2 (1970)</a></td>
+                        <td class="megnezve"></td>
+                    </tr>
+
+                </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        /**
+* Sorts a HTML table.
+* https://codepen.io/dcode-software/pen/zYGOrzK
+* 
+* @param {HTMLTableElement} table The table to sort
+* @param {number} column The index of the column to sort
+* @param {boolean} asc Determines if the sorting will be in ascending
+*/
+        function sortTableByColumn(table, column, asc = true) {
+            const dirModifier = asc ? 1 : -1;
+            const tBody = table.tBodies[0];
+            const rows = Array.from(tBody.querySelectorAll("tr"));
+
+            // Sort each row
+            const sortedRows = rows.sort((a, b) => {
+                const aColText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+                const bColText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+
+                return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+            });
+
+            // Remove all existing TRs from the table
+            while (tBody.firstChild) {
+                tBody.removeChild(tBody.firstChild);
+            }
+
+            // Re-add the newly sorted rows
+            tBody.append(...sortedRows);
+
+            // Remember how the column is currently sorted
+            table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+            table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-asc", asc);
+            table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-desc", !asc);
+        }
+
+        document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+            headerCell.addEventListener("click", () => {
+                const tableElement = headerCell.parentElement.parentElement.parentElement;
+                const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+                const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+                sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+            });
+        });
+    </script>
+</body>
+
+</html>
